@@ -4,7 +4,10 @@
 
 int main(void){
   
-  FILE *file = fopen("Phonebook.csv", "w");
+  FILE *file = fopen("Phonebook.csv", "a");
+  if(file == NULL){
+    return 1;
+  }
 
   char *name = malloc(100*sizeof(char));
   char *number = malloc(100*sizeof(char));
@@ -18,4 +21,5 @@ int main(void){
   fprintf(file, "%s, %s\n", name, number);
 
   fclose(file);
+  return 0;
 }
