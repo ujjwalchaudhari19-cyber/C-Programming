@@ -1,10 +1,5 @@
-# 1. Ignore EVERYTHING by default (This immediately hides 'hello', 'mario', etc.)
 *
-
-# 2. Un-ignore directories so Git can still map your repository architecture
 !*/
-
-# 3. Explicitly whitelist the only files that belong in version control
 !*.c
 !*.h
 !*.md
